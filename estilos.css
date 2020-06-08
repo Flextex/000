@@ -3,14 +3,31 @@
 	max-width:1000px;
 	margin:auto;
 }
+aside {
+	background:#e67e22;
+	padding:20px;
+	/*FLEX*/
+	flex:1 1 30%;
+	/*flex:0 0 300px;*/
+
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction:column;
+	justify-content:flex-start;
+}
+
 @media screen and (max-width: 800px) {
-	.container {
+	..container {
 		flex-direction:column;
 	}
-    .btn-group-vertical {
-	background: #5b5b5b;
-	height:150px;
-	margin:10px;
+	aside {
+		flex-direction:row;
+		flex:0;
+	}
+
+	aside .btn-group-vertical {
+		flex-grow:1;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -21,4 +38,11 @@
 	footer {
 		justify-content:space-around;
 	}
-}	
+}
+@media screen and (max-width: 400px) {
+	.container {
+		width: 100%;
+	}
+	.aside {
+	display: none;
+}
