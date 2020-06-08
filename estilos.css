@@ -7,6 +7,11 @@
 	.container {
 		flex-direction:column;
 	}
+    .btn-group-vertical {
+	background: #5b5b5b;
+	height:150px;
+	margin:10px;
+}
 
 @media screen and (max-width: 600px) {
 	aside {
