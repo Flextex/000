@@ -39,6 +39,10 @@ aside {
 		flex:0;
 	}
 
+    .btn-group-vertical {
+		flex-grow:1;
+	}
+}
 	aside .btn-group-vertical {
 		flex-grow:1;
 	}
