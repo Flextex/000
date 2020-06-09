@@ -26,12 +26,25 @@
 <button class="btn btn-primary" id="download1">
 <span class="icon">Para desbloquear suscribéte ami canal</span>
 </button>
-<button class="btn btn-danger" disabled="" id="download1"><span class="icon">   DESCARGAR   </span></button>
+<button class="btn btn-danger" disabled="" id="download"><span class="icon">   DESCARGAR   </span></button>
 </div>
 </div>
 
 <script type="text/javascript">
     /*<![CDATA[/* */
+    var buton = document.getElementById('downloadf');
+    var count = 0;
+    var countdaemon = setInterval(function () {
+      if (count>0){
+        buton.innerHTML = ' Espere '+count+' '
+      } else {
+        clearInterval(countdaemon)
+        showlink()
+      }
+      count--;
+      },
+    1000);
+var o = 0;
 document.getElementById('download1').disabled = false;
 document.getElementById('download1').onclick = function() 
      {
