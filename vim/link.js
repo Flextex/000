@@ -54,10 +54,9 @@ function base64_decode (data) {
   return dec;
 }
     function showlink(){
-       var urldes = base64_decode(document.location.href.match(/ga\/\?(.+)\/?/)[1]);
-       buton.innerHTML = 'Descargar';
+       var urldes = base64_decode(document.location.href.match(/vim\/\?(.+)\/?/)[1]);
+       buton.innerHTML = 'DESCARGAR';
        buton.onclick = function (){
          location.href = urldes;
        }
     }
-
