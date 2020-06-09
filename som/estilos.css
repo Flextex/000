@@ -21,7 +21,7 @@ body {
 header {
 	background:#2c3e50;
 	width:100%;
-	padding:20px;
+	padding:3px;
 
 	/* Flexbox */
 	display: flex;
@@ -49,7 +49,7 @@ header .logo a {
 }
 
 header nav {
-	width:65%;
+	width:100%;
 	/* Flexbox */
 
 	display:flex;
