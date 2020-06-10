@@ -5,8 +5,8 @@
 }
 
 .contenedor {
-	width:90%;
-	max-width:800px;
+	width:100%;
+	max-width:700px;
 	margin:auto;
 
 	/* Flexbox */
@@ -74,7 +74,7 @@ header nav a:hover {
 
 .btn-group-vertical {
 	width:100%;
-	max-width:800px;
+	max-width:700px;
 	margin:auto;
 
 
@@ -85,9 +85,10 @@ header nav a:hover {
 
 .btn-primary {
 	width:100%;
-	max-width:1000px;
+	max-width:700px;
 	margin:auto;
 	font-size:30px;
+
 	/* Flexbox */
 	display:flex;
 	flex-flow:row wrap;
@@ -95,7 +96,7 @@ header nav a:hover {
 
 .btn-danger{
 	width:100%;
-	max-width:1000px;
+	max-width:700px;
 	margin:auto;
 
 	/* Flexbox */
@@ -105,7 +106,8 @@ header nav a:hover {
 
 .main {
 	background:#fff;
-	padding:20px;
+	padding:10px;
+
 
 	flex:1 1 70%;
 	/*flex:1;*/
@@ -145,7 +147,7 @@ aside .widget {
 footer {
 	background:#2c3e50;
 	width: 100%;
-	padding:20px;
+	padding:10px;
 
 	/* Flexbox */
 	display: flex;
@@ -182,8 +184,18 @@ footer .social a {
 	padding:10px;
 	display: inline-block;
 }
-
-@media screen and (max-width: 800px) {
+.ip {
+ color: #fff;
+ margin-right: -2px;
+ font-size: 15px;
+}
+.icon {
+ color: #fff;
+ margin-right: -2px;
+ font-size: 18px;
+ font-weight: 900; 
+}
+@media screen and (max-width: 700px) {
 	.contenedor {
 		flex-direction:column;
 	}
@@ -229,3 +241,5 @@ footer .social a {
 		justify-content:space-around;
 	}
 }
+
+
