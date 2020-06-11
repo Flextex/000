@@ -11,28 +11,16 @@
 </head>
 <body>
 <div dir="ltr" style="text-align: left;" trbidi="on">
-<div class="contenedor">
-<header>
-      <div class="logo">
-        <img src="images/logo.jpg" width="0" alt="">
-        <a href="#">ESTE CONTENIDO ESTA BLOQUEADO</a>
-      </div>
-    </header>
-    <section class="main">
-      <article>
-        <h2 class="titulo">Para desbloquear</h2>
-        <p>Suscríbete a mi canal de youtube</p>
-      </article>
-    </section> 
+<center>
+<div class="container">
+<div style="text-align: center;">
+<h2>ESTE CONTENIDO ESTA BLOQUEADO</h2></div>
 <div class="btn-group-vertical">
 <button class="btn btn-primary" id="download1" onclick="window.open('https://www.youtube.com/channel/UCz8LJ7uqudKwhWhf2QK8V3A?sub_confirmation=1');"><span class="icon">SUSCRIBITE A MI CANAL PARA DESBLOQUEAR CLICK AQUI</span></button>   
 <button class="btn btn-danger" disabled="" id="downloadf"><span class="icon">   DESCARGAR   </span></button>
 <br>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v5.0"></script>
-<div class="fb-like" data-href="https://www.facebook.com/germanmixoficial/" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
-  <p>COMO DESCARGAR<a target="_blank" href="/">Click aqui</a>.</p>
-  </div>
 </div>
 <script type="text/javascript">
 var o = 0;
@@ -43,22 +31,6 @@ window.open('https://www.youtube.com/channel/UCz8LJ7uqudKwhWhf2QK8V3A?sub_confir
 document.getElementById('downloadf').disabled = false;
      };
 </script>
-<script type="text/javascript">
-    /*<![CDATA[/* */
-    var buton = document.getElementById('downloadf');
-    var count = 0;
-    var countdaemon = setInterval(function () {
-      if (count>0){
-        buton.innerHTML = ' Espere '+count+' segundos... '
-      } else {
-        clearInterval(countdaemon)
-        showlink()
-      }
-      count--;
-      },
-    1000);
-    /*]]>/* */
-    </script>
 </center>   
 </body>
 </html>
