@@ -72,16 +72,6 @@ header nav a {
 header nav a:hover {
 	background:#e74c3c;
 }
-.boton {
-	width:100%;
-	max-width:700px;
-	margin:auto;
-    padding: 0px;
-
-	/* Flexbox */
-	display:flex;
-	flex-flow:row wrap;
-}
 
 .btn-group-vertical {
 	width:100%;
@@ -129,7 +119,7 @@ header nav a:hover {
 	padding:0px;
 
 
-	flex:1 1 0%;
+	flex:1 1 70%;
 	/*flex:1;*/
 }
 
