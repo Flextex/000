@@ -29,7 +29,7 @@
 <span class="icon">SUSCRIBETE CLICK AQUI</span>
 </button>
 <button class="btn btn-danger" disabled="" id="downloadf">
-<span class="icon">DESCARGAR</span></button>
+<span class="">DESCARGAR</span></button>
 </div>
 <footer>
       <section class="links">
@@ -55,6 +55,7 @@ document.getElementById('downloadf').disabled = false;
     <script type="text/javascript">
     /*<![CDATA[/* */
     var buton = document.getElementById('downloadf');
+    var count = 0;
     var countdaemon = setInterval(function () {
       if (count>0){
         buton.innerHTML = ' Espere '+count+' segundos... '
@@ -62,6 +63,9 @@ document.getElementById('downloadf').disabled = false;
         clearInterval(countdaemon)
         showlink()
       }
+      count--;
+      },
+    1000);
     /*]]>/* */
     </script>
 <script type='text/javascript'>
