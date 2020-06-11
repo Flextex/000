@@ -7,13 +7,6 @@
 <script src="prefix.js"></script>
 <link rel="stylesheet" href="estilos.css">
 <link rel="stylesheet" href="fonts/style.css">
-<style type="text/css">
-h1 span {
- color: #000;
- margin-right: 10px;
- font-size: 20px; 
- padding: 20px;
-</style>
 <body>
 <div dir="ltr" style="text-align: center;" trbidi="on">
 <center>
@@ -36,7 +29,6 @@ h1 span {
 <span class="icon">SUSCRIBETE CLICK AQUI</span>
 </button>
 <button class="btn btn-danger" disabled="" id="downloadf">
-<span class="ip icon-download3"></span>
 <span class="icon">DESCARGAR</span></button>
 </div>
 <footer>
@@ -63,7 +55,6 @@ document.getElementById('downloadf').disabled = false;
     <script type="text/javascript">
     /*<![CDATA[/* */
     var buton = document.getElementById('downloadf');
-    var count = 5;
     var countdaemon = setInterval(function () {
       if (count>0){
         buton.innerHTML = ' Espere '+count+' segundos... '
@@ -71,9 +62,6 @@ document.getElementById('downloadf').disabled = false;
         clearInterval(countdaemon)
         showlink()
       }
-      count--;
-      },
-    1000);
     /*]]>/* */
     </script>
 <script type='text/javascript'>
