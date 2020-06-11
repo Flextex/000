@@ -104,6 +104,15 @@ header nav a:hover {
 	display:flex;
 	flex-flow:row wrap;
 }
+.btn-danger{
+	width:100%;
+	max-width:700px;
+	margin:auto;
+
+	/* Flexbox */
+	display:flex;
+	flex-flow:row wrap;
+}
 
 .main {
 	background:#fff;

