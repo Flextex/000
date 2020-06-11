@@ -38,7 +38,4 @@
 }
     function showlink(){
        var urldes = base64_decode(document.location.href.match(/som\/\?(.+)\/?/)[1]);
-       buton.onclick = function (){
-         location.href = urldes;
-       }
     }

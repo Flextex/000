@@ -14,6 +14,7 @@
 	flex-flow:row wrap;
 }
 
+
 body {
 	background:#e9e9e9;
 }
@@ -103,7 +104,6 @@ header nav a:hover {
 	display:flex;
 	flex-flow:row wrap;
 }
-
 
 .main {
 	background:#fff;
