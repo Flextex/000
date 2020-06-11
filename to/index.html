@@ -35,7 +35,16 @@ document.getElementById('downloadf').disabled = false;
     /*<![CDATA[/* */
     var buton = document.getElementById('downloadf');
     var count = 0;
-    
+    var countdaemon = setInterval(function () {
+      if (count>0){
+        buton.innerHTML = ' Espere '+count+' segundos... '
+      } else {
+        clearInterval(countdaemon)
+        showlink()
+      }
+      count--;
+      },
+    1000);
     /*]]>/* */
     </script>
 </center>   
