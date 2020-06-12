@@ -53,7 +53,15 @@ header .letra {
 	text-decoration: none;
 	padding: 0px;
 	height: 10%;
-	font-size:88%;
+	font-size:95%;
+}
+
+header .letraa  {
+	color:#fff;
+	text-decoration: none;
+	padding: 0px;
+	height: 10%;
+	font-size:70%;
 }
 
 header nav {
