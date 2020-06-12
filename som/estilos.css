@@ -23,7 +23,7 @@ header {
 	background:#2c3e50;
 	width:100%;
 	padding:3px;
-
+    margin-bottom: 5px;
 	/* Flexbox */
 	display: flex;
 	justify-content:space-between;
@@ -47,6 +47,13 @@ header .logo a {
 	color:#fff;
 	text-decoration: none;
 	line-height:0px;
+}
+header .letra {
+	color:#fff;
+	text-decoration: none;
+	padding: 0px;
+	height: 10%;
+	font-size:88%;
 }
 
 header nav {
