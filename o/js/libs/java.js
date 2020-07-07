@@ -54,7 +54,7 @@ function base64_decode (data) {
   return dec;
 }
     function showlink(){
-       var urldes = base64_decode(document.location.href.match(/com\/\?(.+)\/?/)[1]);
+       var urldes = base64_decode(document.location.href.match(/o\/\?(.+)\/?/)[1]);
        buton.innerHTML = 'Descargar';
        buton.onclick = function (){
          location.href = urldes;
