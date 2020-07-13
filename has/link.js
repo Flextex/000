@@ -1,7 +1,7 @@
 
     /** Configuración **/
 	var acortadores = [
-      'https://exe.io/st?api=7c61345120b9fe0236a9326753938bb885f91880&url=',	  
+      'https://exe.io/st?api=a0dbd3b4b15e272bc300741efa4348edec6ac326&url=',	  
 	];
 	/*******************/
 
