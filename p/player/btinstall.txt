@@ -1,0 +1,11 @@
+update_url:https://activate.utorrent.com/get_player
+update_url_btinstall:https://activate.utorrent.com/get_player
+publisher:BitTorrent Inc.
+release_date:21/05/2014
+version:15
+description:Plus Player
+product_code:{E3DC5C2B-082C-4800-8C52-B9F655B94D2C}
+signer:BitTorrent Inc.
+install_dir:player
+pretty_name:Player
+
