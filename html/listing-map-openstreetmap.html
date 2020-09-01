@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Prozim - Find a Professional and Book a Consultation by Appointment, Chat or Video call">
+    <meta name="author" content="Ansonika">
+    <title>Prozim - Find a Professional and Book a Consultation by Appointment, Chat or Video call</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap_customized.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- SPECIFIC CSS -->
+    <link href="css/listing.css" rel="stylesheet">
+    <link href="css/leaflet.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+				
+	<header class="header_in sticky clearfix">
+		<div class="container-fluid">
+		<div id="logo">
+			<a href="index.html">
+				<img src="img/logo_sticky.svg" width="120" height="35" alt="" class="logo_sticky">
+			</a>
+		</div>
+		<ul id="top_menu">
+			<li><a href="login.html" class="btn_access">Log In</a></li>
+		</ul>
+		<!-- /top_menu -->
+		<a href="#0" class="open_close">
+			<i class="icon_menu"></i><span>Menu</span>
+		</a>
+		<nav class="main-menu">
+			<div id="header_menu">
+				<a href="#0" class="open_close">
+					<i class="icon_close"></i><span>Menu</span>
+				</a>
+				<a href="index.html"><img src="img/logo.svg" width="120" height="35" alt=""></a>
+			</div>
+			<ul>
+				<li class="submenu">
+					<a href="#0" class="show-submenu">Home</a>
+					<ul>
+						<li><a href="index.html">Default</a></li>
+						<li><a href="index-2.html">Video Background</a></li>
+						<li><a href="index-3.html">Slider</a></li>
+						<li><a href="index-4.html">GDPR Cookie Bar EU Law</a></li>
+						<li><a href="index-5.html">Full Screen</a></li>
+						<li><a href="user-logged-1.html">User Logged</a></li>
+					</ul>
+				</li>
+				<li class="submenu">
+					<a href="#0" class="show-submenu">Listing</a>
+					<ul>
+						<li><a href="grid-listing-1.html">Grid Listing Default</a></li>
+						<li><a href="grid-listing-2.html">Grid Listing Isotope Sort</a></li>
+						<li><a href="grid-listing-3.html">Grid Listing Filters Left</a></li>
+						<li><a href="listing-map.html">Listing Side Map</a></li>
+						<li><a href="detail-page.html">Detail page 1</a></li>
+						<li><a href="detail-page-2.html">Detail page 2</a></li>
+						<li><a href="detail-page-3.html">Detail page 3</a></li>
+						<li class="third-level"><a href="#0">OpenStreetMap</a>
+							<ul>
+								<li><a href="grid-listing-1-openstreetmap.html">Grid Listing</a></li>
+								<li><a href="listing-map-openstreetmap.html">Listing Side Map</a></li>
+							</ul>
+						</li>
+						<li><a href="booking.html">Booking</a></li>
+						<li><a href="submit-professional.html">Submit Professional</a></li>
+						<li><a href="wishlist.html">Wishlist</a></li>
+						<li><a href="leave-review.html">Leave a Review</a></li>
+						<li><a href="user-logged-2.html">User Logged 2</a></li>					
+					</ul>
+				</li>
+				<li class="submenu">
+					<a href="#0" class="show-submenu">Other Pages</a>
+					<ul>
+						<li><a href="admin_section/index.html">Admin Dashboard</a></li>
+						<li><a href="404.html">404 Error</a></li>
+						<li><a href="help.html">Help and Faq</a></li>
+						<li><a href="modal-login.html">Modal Login</a></li>
+						<li><a href="modal-popup.html">Modal Advertise</a></li>
+						<li><a href="modal-newsletter.html">Modal Newsletter</a></li>
+						<li><a href="pricing-tables-1.html">Pricing Tables 1</a></li>
+						<li><a href="pricing-tables-2.html">Pricing Tables 2</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="contacts.html">Contacts</a></li>
+						<li><a href="coming_soon/index.html" target="_blank">Coming Soon</a></li>
+						<li><a href="login.html">Login</a></li>
+						<li><a href="register.html">Register</a></li>
+						<li><a href="icon-pack-1.html">Icon Pack 1</a></li>
+					</ul>
+				</li>
+				<li><a href="#0">Buy this template</a></li>
+			</ul>
+		</nav>
+	</div>
+	</header>
+	<!-- /header -->
+	
+	<main>
+	    <div class="container-fluid full-height">
+	        <div class="row row-height">
+	            <div class="col-xl-3 col-lg-5 content-left order-md-last order-sm-last order-last map_view">
+	                <div class="page_header element_to_stick">
+	                    <div class="row">
+	                        <div class="col-xl-12 d-none d-md-block">
+	                            <h1>145 doctors found</h1>
+	                        </div>
+	                        <div class="col-xl-12">
+	                            <div class="search_bar_list">
+	                                <input type="text" class="form-control" placeholder="Search again...">
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <!-- /row -->
+	                </div>
+	                <!-- /page_header -->
+
+	                <div class="filters_full clearfix">
+	                    <div class="container">
+	                        <div class="sort_select">
+	                            <select name="sort" id="sort">
+	                                <option value="popularity" selected="selected">Sort by Popularity</option>
+	                                <option value="rating">Sort by Average rating</option>
+	                                <option value="date">Sort by newness</option>
+	                                <option value="price">Sort by Price: low to high</option>
+	                                <option value="price-desc">Sort by Price: high to low</option>
+	                            </select>
+	                        </div>
+	                        <a href="#collapseFilters" data-toggle="collapse" class="btn_filters"><i class="icon_adjust-vert"></i><span>Filters</span></a>
+	                    </div>
+	                </div>
+	                <!-- /filters_full -->
+
+	                <div class="collapse filters_2" id="collapseFilters">
+	                    <div class="container margin_detail">
+	                        <div class="row">
+	                            <div class="col-md-6">
+	                                <div class="filter_type">
+	                                    <h6>Rating</h6>
+					                    <ul>
+					                        <li>
+					                            <label class="container_check">Superb 9+
+					                                <input type="checkbox">
+					                                <span class="checkmark"></span>
+					                            </label>
+					                        </li>
+					                        <li>
+					                            <label class="container_check">Very Good 8+
+					                                <input type="checkbox">
+					                                <span class="checkmark"></span>
+					                            </label>
+					                        </li>
+					                        <li>
+					                            <label class="container_check">Good 7+
+					                                <input type="checkbox">
+					                                <span class="checkmark"></span>
+					                            </label>
+					                        </li>
+					                        <li>
+					                            <label class="container_check">Pleasant 6+
+					                                <input type="checkbox">
+					                                <span class="checkmark"></span>
+					                            </label>
+					                        </li>
+					                    </ul>
+	                                </div>
+	                            </div>
+	                            <div class="col-md-6">
+	                                <div class="filter_type">
+	                                    <h6>Availability</h6>
+					                    <ul>
+					                        <li>
+					                            <label class="container_check">Apointment
+					                                <input type="checkbox">
+					                                <span class="checkmark"></span>
+					                            </label>
+					                        </li>
+					                        <li>
+					                            <label class="container_check">Chat
+					                                <input type="checkbox">
+					                                <span class="checkmark"></span>
+					                            </label>
+					                        </li>
+					                        <li>
+					                            <label class="container_check">Video Call
+					                                <input type="checkbox">
+					                                <span class="checkmark"></span>
+					                            </label>
+					                        </li>
+					                    </ul>
+	                                </div>
+	                            </div>
+	                            <div class="col-md-12">
+	                                <div class="filter_type">
+	                                    <h6>Price</h6>
+					                    <div class="range_input">Price range from 0 to <span></span>$</div>
+					                    <div><input type="range" min="10" max="100" step="10" value="30" data-orientation="horizontal"></div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <!-- /row -->
+	                    </div>
+	                </div>
+	                <!-- /filters -->
+	                
+	                <div class="row">
+	                    <div class="col-lg-12 col-sm-6">
+	                        <div class="strip">
+	                             <figure>
+				                    <a href="#0" class="wish_bt"><i class="icon_heart"></i></a>
+				                    <img src="img/lazy-placeholder.png" data-src="img/professionals_photos/1.jpg" class="img-fluid lazy" alt="">
+				                    <a href="detail-page.html" class="strip_info">
+				                        <div class="item_title">
+				                            <h3>Dr. Maria Cornfield</h3>
+				                            <small>Pediatrician, Psychologist ...</small>
+				                        </div>
+				                    </a>
+				                </figure>
+	                            <ul>
+	                                <li><a href="#0" data-id="1" class="address">View on Map</a></li>
+	                                <li>
+	                                    <div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div>
+	                                </li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                    <!-- /strip grid -->
+	                    <div class="col-lg-12 col-sm-6">
+	                        <div class="strip">
+	                            <figure>
+				                    <a href="#0" class="wish_bt"><i class="icon_heart"></i></a>
+				                    <img src="img/lazy-placeholder.png" data-src="img/professionals_photos/2.jpg" class="img-fluid lazy" alt="">
+				                    <a href="detail-page.html" class="strip_info">
+				                        <div class="item_title">
+				                            <h3>Dr. Lucy Shoemaker</h3>
+				                            <small>Autoimmune Diseases</small>
+				                        </div>
+				                    </a>
+				                </figure>
+	                            <ul>
+	                                <li><a href="#0" data-id="2" class="address">View on Map</a></li>
+	                                <li>
+	                                    <div class="score"><span>Superb<em>350 Reviews</em></span><strong>9.5</strong></div>
+	                                </li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                    <!-- /strip grid -->
+	                    <div class="col-lg-12 col-sm-6">
+	                        <div class="strip">
+	                             <figure>
+				                    <a href="#0" class="wish_bt"><i class="icon_heart"></i></a>
+				                    <img src="img/lazy-placeholder.png" data-src="img/professionals_photos/3.jpg" class="img-fluid lazy" alt="">
+				                    <a href="detail-page.html" class="strip_info">
+				                        <div class="item_title">
+				                            <h3>Dr. Luke Lachinet</h3>
+				                            <small>Obstetrician, Gynecologist...</small>
+				                        </div>
+				                    </a>
+				                </figure>
+	                            <ul>
+	                                <li><a href="#0" data-id="3" class="address">View on Map</a></li>
+	                                <li>
+	                                    <div class="score"><span>Superb<em>350 Reviews</em></span><strong>7.5</strong></div>
+	                                </li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                    <!-- /strip grid -->
+	                    <div class="col-lg-12 col-sm-6">
+	                        <div class="strip">
+	                            <figure>
+				                    <a href="#0" class="wish_bt"><i class="icon_heart"></i></a>
+				                    <img src="img/lazy-placeholder.png" data-src="img/professionals_photos/4.jpg" class="img-fluid lazy" alt="">
+				                    <a href="detail-page.html" class="strip_info">
+				                        <div class="item_title">
+				                            <h3>Dr. Marta Rainwater</h3>
+				                            <small>Dermatologist</small>
+				                        </div>
+				                    </a>
+				                </figure>
+	                            <ul>
+	                                <li><a href="#0" data-id="4" class="address">View on Map</a></li>
+	                                <li>
+	                                    <div class="score"><span>Superb<em>350 Reviews</em></span><strong>9.5</strong></div>
+	                                </li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                    <!-- /strip grid -->
+	                    <div class="col-lg-12 col-sm-6">
+	                        <div class="strip">
+	                           <figure>
+				                    <a href="#0" class="wish_bt"><i class="icon_heart"></i></a>
+				                    <img src="img/lazy-placeholder.png" data-src="img/professionals_photos/5.jpg" class="img-fluid lazy" alt="">
+				                    <a href="detail-page.html" class="strip_info">
+				                        <div class="item_title">
+				                            <h3>Dr. Tom Manzone</h3>
+				                            <small>Psychologist</small>
+				                        </div>
+				                    </a>
+				                </figure>
+	                            <ul>
+	                                <li><a href="#0" data-id="5" class="address">View on Map</a></li>
+	                                <li>
+	                                    <div class="score"><span>Superb<em>350 Reviews</em></span><strong>7.0</strong></div>
+	                                </li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                    <!-- /strip grid -->
+	                    <div class="col-lg-12 col-sm-6">
+	                        <div class="strip">
+	                             <figure>
+				                    <a href="#0" class="wish_bt"><i class="icon_heart"></i></a>
+				                    <img src="img/lazy-placeholder.png" data-src="img/professionals_photos/6.jpg" class="img-fluid lazy" alt="">
+				                    <a href="detail-page.html" class="strip_info">
+				                        <div class="item_title">
+				                            <h3>Dr. Rose Cornfield</h3>
+				                            <small>General Medicine</small>
+				                        </div>
+				                    </a>
+				                </figure>
+	                            <ul>
+	                                <li><a href="#0" data-id="6" class="address">View on Map</a></li>
+	                                <li>
+	                                    <div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div>
+	                                </li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                    <!-- /strip grid -->
+	                    <div class="col-lg-12 col-sm-6">
+	                        <div class="strip">
+	                            <figure>
+				                    <a href="#0" class="wish_bt"><i class="icon_heart"></i></a>
+				                    <img src="img/lazy-placeholder.png" data-src="img/professionals_photos/7.jpg" class="img-fluid lazy" alt="">
+				                    <a href="detail-page.html" class="strip_info">
+				                        <div class="item_title">
+				                            <h3>Dr. Maria Cornfield</h3>
+				                            <small>Cardiologist</small>
+				                        </div>
+				                    </a>
+				                </figure>
+	                            <ul>
+	                                <li><a href="#0" data-id="7" class="address">View on Map</a></li>
+	                                <li>
+	                                    <div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div>
+	                                </li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                    <!-- /strip grid -->
+	                    <div class="col-lg-12 col-sm-6">
+	                        <div class="strip">
+	                            <figure>
+				                    <a href="#0" class="wish_bt"><i class="icon_heart"></i></a>
+				                    <img src="img/lazy-placeholder.png" data-src="img/professionals_photos/8.jpg" class="img-fluid lazy" alt="">
+				                    <a href="detail-page.html" class="strip_info">
+				                        <div class="item_title">
+				                            <h3>Dr. Jim Jake</h3>
+				                            <small>Obstetrician, Gynecologist...</small>
+				                        </div>
+				                    </a>
+				                </figure>
+	                            <ul>
+	                                <li><a href="#0" data-id="8" class="address">View on Map</a></li>
+	                                <li>
+	                                    <div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div>
+	                                </li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                    <!-- /strip grid -->
+	                    <div class="col-lg-12 col-sm-6">
+	                        <div class="strip">
+	                            <figure>
+				                    <a href="#0" class="wish_bt"><i class="icon_heart"></i></a>
+				                    <img src="img/lazy-placeholder.png" data-src="img/professionals_photos/9.jpg" class="img-fluid lazy" alt="">
+				                    <a href="detail-page.html" class="strip_info">
+				                        <div class="item_title">
+				                            <h3>Dr. Barbara Ocean</h3>
+				                            <small>Cardiologist</small>
+				                        </div>
+				                    </a>
+				                </figure>
+	                            <ul>
+	                                <li><a href="#0" data-id="9" class="address">View on Map</a></li>
+	                                <li>
+	                                    <div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div>
+	                                </li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                    <!-- /strip grid -->
+	                </div>
+	                <!-- /row -->
+	                <p class="text-center"><a href="#0" class="btn_1"><strong>Load more</strong></a></p>
+	            </div>
+	            <!-- /content-left-->
+	            <div class="col-xl-9 col-lg-7 map-right">
+	                <div id="map" class="map_right_listing"></div>
+	                <!-- map-->
+	            </div>
+	            <!-- /map-right-->
+	        </div>
+	        <!-- /row-->
+	    </div>
+	    <!-- /container-fluid -->
+	</main>
+	<!--/main-->
+	
+	<div class="layer"></div><!-- Opacity Mask Menu Mobile -->
+	
+	
+	<!-- COMMON SCRIPTS -->
+    <script src="js/common_scripts.min.js"></script>
+    <script src="js/common_func.js"></script>
+    <script src="assets/validate.js"></script>
+
+    <!-- SPECIFIC SCRIPTS -->
+    <script src="js/sticky_sidebar.min.js"></script>
+    <script src="js/specific_listing.js"></script>
+
+    <!-- Map LeafLet + Mapbox-->
+	<script src="js/leaflet_map/leaflet.min.js"></script>
+    <script src="js/leaflet_map/leaflet_markercluster.min.js"></script>
+    <script src="js/leaflet_map/leaflet_markers.js"></script>
+    <script src="js/leaflet_map/leaflet_half_screen_func.js"></script>
+
+</body>
+</html>

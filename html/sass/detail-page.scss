@@ -1,0 +1,1129 @@
+/*============================================================================================*/
+/* Detail page */
+/*============================================================================================*/
+@import 'variables';
+@import 'mixin';
+
+/*-------- Page head --------*/
+.video_youtube {
+    iframe {
+        border: 0;
+        width: 100%;
+        height: 400px;
+    }
+}
+
+
+.main_info_wrapper {
+    padding: 30px;
+
+    .main_info {
+      position: relative;
+        .user_thumb {
+            float: left;
+            width: 100px;
+            margin-right: 25px;
+            @include mobile {float: none; margin: 0 auto 15px;}
+            figure {
+                margin-bottom: 10px;
+                overflow: hidden;
+                position: relative;
+                height: 100px;
+                width: 100px;
+                @include border-radius(50%);
+                border: 2px solid $border-color-3;
+                img {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    @include transform (translate(-50%, -50%) scale(1));
+                    width: 100%;
+                    z-index: 1;
+                }
+            }
+
+            em {
+                text-align: center;
+                display: block;
+                font-style: normal;
+                @include fontSize(12px);
+
+                span {
+                    display: inline-block;
+                    width: 7px;
+                    height: 7px;
+                    @include border-radius(50%);
+                    margin-right: 5px;
+                    
+                }
+                &.online span{
+                      background-color: #00cc00;
+                  }
+                 &.offline span{
+                      background-color: #ff3333;
+                  }
+            }
+        }
+
+        .user_desc {
+            float: left;
+            @include mobile {float: none; text-align: center;}
+            h3 {
+               @include fontSize(24px);
+          }
+          ul.tags {
+            margin: 8px 0 25px 0;
+            padding: 0;
+            &.no_margin {
+              margin-bottom: 0;
+            }
+            @include mobile {margin: 8px 0 20px 0;}
+            li {
+                display: inline-block;
+                margin-right: 3px;
+
+                a {
+                    border: 1px solid $border-color-2;
+                    padding: 4px 10px;
+                    line-height: 1;
+                    color: #666;
+                    display: inline-block;
+                    margin-bottom: 5px;
+                    @include fontSize(13px);
+                    @include border-radius(3px);
+
+                    &:hover {
+                        color: $color-1;
+                    }
+                }
+            }
+        }
+        }
+    }
+}
+
+.score_in {
+    text-align: right;
+    @include mobile {
+     text-align: center;
+    }
+    .rating {
+        display: inline-block;
+        margin-right: 15px;
+        .score strong{
+         background-color: $color-2;
+         color: #fff;
+      }
+    }
+
+    a.wish_bt {
+        @include fontSize(32px);
+        color: #ddd;
+        position: relative;
+        top: 6px;
+
+        &.liked {
+            color: $color-1;
+
+        }
+        @include mobile {
+     margin-right: 15px;
+    }
+    }
+}
+
+.box_booking {
+    @include box-shadow (0px 7px 25px 0px rgba(0, 0, 0, 0.10));
+    @include border-radius(8px);
+    margin-bottom: 25px;
+    background-color: #fff;
+    .head {
+        text-align: center;
+        padding: 20px;
+
+        h3 {
+            @include fontSize(24px);
+            margin: 0;
+        }
+
+        small {
+            display: block;
+        }
+
+    }
+
+    .main {
+        padding: 0 25px 25px 25px;
+
+        #datepicker_field {
+            display: none;
+        }
+    }
+
+    .form-group {
+        margin: 0 0 10px 0;
+    }
+
+    textarea {
+        height: 130px;
+    }
+
+    a.close_panel_mobile {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        color: #333;
+        @include fontSize(26px);
+        display: none;
+    }
+
+    &.mobile_fixed {
+        @include mobile {
+            display: none;
+            @include border-radius(0);
+            position: fixed;
+            overflow-y: scroll;
+            border: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999999;
+            background-color: #fff;
+
+            .head {
+                padding: 10px 20px 10px 20px;
+                position: relative;
+
+                h3 {
+                    @include fontSize(18px);
+                    text-transform: uppercase;
+                }
+
+                .offer {
+                    display: none;
+                }
+
+                a.close_panel_mobile {
+                    display: inline-block;
+                }
+            }
+
+            .main {
+                padding-bottom: 50px;
+            }
+
+            .btn_1_mobile {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                padding: 5px;
+                background-color: #fff;
+                border-top: 1px solid #ededed;
+                z-index: 9999999;
+
+                .text-center {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/*-------- Fixed Booking Panel--------*/
+.box_booking {
+
+    a.close_panel_mobile {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        color: #333;
+        @include fontSize(26px);
+        display: none;
+    }
+
+    &.mobile_fixed {
+        @include mobile {
+            display: none;
+            @include border-radius(0);
+            position: fixed;
+            overflow-y: scroll;
+            border: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999999;
+            background-color: #fff;
+
+            .head {
+                padding: 10px 20px 10px 20px;
+                position: relative;
+
+                h3 {
+                    @include fontSize(18px);
+                    text-transform: uppercase;
+                }
+
+                .offer {
+                    display: none;
+                }
+
+                a.close_panel_mobile {
+                    display: inline-block;
+                }
+            }
+
+            .main {
+                padding-bottom: 50px;
+            }
+
+            .btn_1_mobile {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                padding: 10px;
+                background-color: #fff;
+                border-top: 1px solid #ededed;
+                z-index: 9999999;
+
+                .text-center {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.btn_reserve_fixed {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ededed;
+    display: none;
+    z-index: 9;
+
+    @include mobile {
+        display: block;
+    }
+}
+
+/*! jQuery UI - v1.10.4
+* http://jqueryui.com
+
+/* Layout helpers
+----------------------------------*/
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+  content: "";
+  display: table;
+  border-collapse: collapse;
+}
+.ui-helper-clearfix:after {
+  clear: both;
+}
+.ui-helper-clearfix {
+  min-height: 0; /* support: IE7 */
+}
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled {
+  cursor: default !important;
+}
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon {
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+.ui-datepicker {
+  width: 100%;
+  display: none;
+}
+.ui-datepicker .ui-datepicker-header {
+  position: relative;
+  padding: .2em 0;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  position: absolute;
+  top: -4px;
+  width: 1.8em;
+  height: 1.8em;
+}
+.ui-datepicker .ui-datepicker-prev:before,
+.ui-datepicker .ui-datepicker-next:before {
+  font-family: 'ElegantIcons';
+  @include fontSize(26px);
+}
+.ui-datepicker .ui-datepicker-prev:before {
+  content: "\34";
+}
+.ui-datepicker .ui-datepicker-next:before {
+  content: "\35";
+}
+.ui-datepicker .ui-datepicker-prev {
+  left: 2px;
+}
+.ui-datepicker .ui-datepicker-next {
+  right: 2px;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+  background-color: transparent!important;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+  background-color: transparent!important;
+}
+
+.ui-datepicker .ui-datepicker-title {
+  margin: 0 2.3em;
+  line-height: 1.8em;
+  text-align: center;
+}
+.ui-datepicker table {
+  width: 100%;
+  font-size: 14px;
+  border-collapse: collapse;
+  margin: 0 0 .4em;
+}
+.ui-datepicker th {
+  padding: .7em .3em;
+  text-align: center;
+  font-weight: 400;
+  border: 0;
+}
+.ui-datepicker td {
+  border: 0;
+  padding: 1px;
+  text-align: center;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  @include border-radius(50%);
+  text-align: center;
+  text-decoration: none;
+}
+
+
+/* Component containers
+----------------------------------*/
+.ui-widget {
+  font-size: 1.1em;
+}
+.ui-widget .ui-widget {
+  font-size: 1em;
+}
+.ui-widget-content {
+  color: #362b36;
+}
+.ui-widget-content a {
+  color: #362b36;
+}
+.ui-widget-header {
+  color: #222222;
+  font-weight: 500;
+}
+.ui-widget-header a {
+  color: #222222;
+}
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  font-weight: 600;
+  color: $body-text-color;
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited {
+  color: #2779aa;
+  text-decoration: none;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+  background-color: #dfd;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+  background: $color-1!important;
+  color: #fff!important;
+  &:after {
+    color: #ffff66;
+  }
+}
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  background: #dfd;
+  color: #444;
+}
+
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled {
+  opacity: .35;
+  filter:Alpha(Opacity=35);
+  background-image: none;
+}
+.ui-state-disabled .ui-icon {
+  filter:Alpha(Opacity=35); /* For IE8 - See #6059 */
+}
+
+#DatePicker {
+ padding: 15px 15px 5px 15px;
+ border: 1px solid $border-color-2;
+ margin-bottom: 10px; 
+ @include border-radius(3px);
+}
+
+.highlight a{
+  background-color: #dfd !important;
+}
+
+.ui-datepicker-today a.ui-state-default.ui-state-highlight.ui-state-active {
+  background-color: #444!important;
+}
+
+.msg {
+   background-color: $color-3;
+   padding:10px;
+   @include border-radius(3px);
+   text-align: center;
+   margin-bottom: 10px;
+  
+   h4 {
+    @include fontSize(15px);
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+.tabs_detail {
+    margin-top: 15px;
+    @include mobile {margin: 0;}
+    .nav-tabs {
+        border: none;
+        border-bottom: 2px solid #ededed;
+        display: flex;
+
+        @include mobile {
+            display: none;
+        }
+
+        .nav-item {
+            font-weight: 500;
+            .nav-link {
+              @include fontSize(18px);
+              height: 40px;
+          }
+        }
+    }
+
+    .tab-content {
+        .card {
+            border: none;
+            background-color: transparent;
+
+            .card-header {
+                padding: 0;
+                background-color: transparent;
+                border-bottom: 1px solid $border-color-2;
+               h5 {
+                    margin: 0;
+                }
+                a {
+                    display: block;
+                    @include fontSize(18px);
+                    padding: 15px;
+                    color: $heading-color;
+                }
+            }
+
+            .card-body {
+                padding: 30px 30px 25px 30px;
+                @include tablet {padding: 15px 20px 5px 20px;}
+                 &.reviews .add_bottom_45 {
+                  @include tablet {padding-bottom: 25px;}
+              }
+            }
+        }
+    }
+
+    @media(min-width:768px) {
+
+        .tab-content .card {
+            border: none;
+        }
+
+        .tab-content .card .card-header {
+            display: none;
+        }
+
+        .tab-content .card .collapse {
+            display: block;
+        }
+    }
+
+
+    @media(max-width:767px) {
+    .tab-content {
+        
+
+        .card-header {
+            a {
+               &:after {
+                        font-family: 'ElegantIcons';
+                        width: 20px;
+                        display: block;
+                        float: right;
+                    }
+                &.collapsed {
+                    &:after {
+                        content: "\50";
+                    }
+                }
+
+                &:after {
+                    content: "\4f";
+                }
+            }
+        }
+    }
+
+    .tab-content .fade:not(.show) {
+        opacity: 1;
+    }
+
+    .tab-content .tab-pane {
+        display: block !important;
+        opacity: 1;
+    }
+}
+}
+
+ul.share-buttons {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin: 0 0 25px 0;
+  li {
+    display: inline-block;
+    margin: 0 5px 5px 5px;
+     a {
+      background: #fff;
+      border: 1px solid $border-color-2;
+      @include border-radius(3px);
+      font-weight: 500;
+      @include fontSize(13px);
+      padding: 7px 20px;
+      transition: 0.3s;
+      display: inline-block;
+      line-height: 17px;
+      font-weight: 500;
+      &:hover {color: #fff;}
+      &.fb-share {
+        color: #3b5998;
+        &:hover {background: #3b5998;color: #fff; border-color:#3b5998;}
+      }
+      &.gplus-share {
+        color: #dd4b39;
+        &:hover {background: #dd4b39;color: #fff; border-color:#dd4b39;}
+      }
+      &.twitter-share {
+        color: #1da1f2;
+        &:hover {background: #1da1f2;color: #fff; border-color:#1da1f2;}
+      }
+    }
+    i {
+      @include fontSize(16px);
+      position: relative;
+      right: 3px;
+      top: 2px;
+    }
+  }
+}
+
+.info_content {
+    h3 {
+        font-weight: 500;
+        margin-bottom: 15px;
+        @include fontSize(18px);
+    }
+    hr {
+        margin-top: 25px;
+        margin-bottom: 25px;;
+    }
+    
+}
+
+
+
+a.show_hide:focus {
+    color:$color-1;
+    &:hover{color: #111;}
+
+}
+
+.reviews {
+    #review_summary {
+        text-align: center;
+        background-color: $color-2;
+        color: #fff;
+        padding: 20px 10px;
+        @include border-radius(5px);
+
+        @include tablet {
+            margin-bottom: 15px;
+        }
+
+        strong {
+            @include fontSize(42px);
+            display: block;
+            line-height: $line-height-none;
+        }
+
+        em {
+            font-style: normal;
+            font-weight: 500;
+            display: block;
+        }
+    }
+
+    .progress {
+        margin-bottom: 12px;
+        height: 5px;
+    }
+
+    .progress-bar {
+        background-color: #33cc00;
+    }
+    .reviews_sum_details {
+      h6 {
+          @include fontSize(14px);
+      }
+      strong {
+         position: relative;
+         top:-8px;
+      }
+    }
+}
+
+.review_card {
+ border: 1px solid $border-color-2;
+  @include border-radius(3px);
+  padding: 25px 25px 10px 25px;
+  margin-bottom: 30px;
+    @include box-shadow (0 2px 4px rgba(3,27,78,.06));
+  .user_info {
+    text-align: center;
+        @include mobile {margin-bottom: 10px;}
+    figure {
+      width: 50px;
+      height: 50px;
+      overflow: hidden;
+      @include border-radius(50%);
+      display: inline-block;
+      position: relative;
+      margin-bottom: 10px;
+            @include mobile {float: left;}
+      img {
+        width: 50px;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        @include transform (translate(-50%, -50%));
+      }
+    }
+    h5 {
+      @include fontSize(13px);
+            @include mobile {float: left; margin: 18px 0 0 15px;}
+    }
+  }
+  .review_content {
+    h4 {
+      @include fontSize(18px);
+    }
+    .rating {
+      float: left;
+      font-weight: 600;
+      @include fontSize(26px);
+      color: $color-1;
+      small {
+        @include fontSize(12px);
+         font-weight: 600;
+      }
+      strong {
+        @include fontSize(13px);
+         font-weight: 400;
+         color:#444;
+      }
+      @include extra-small-mobile {float: none; display: block;}
+      em {
+        @include extra-small-mobile {float: none;display: inline-block;margin-left: 10px;}
+      }
+    }
+    em {
+      color:#999;
+      float: right;
+      @include extra-small-mobile {float: none; display: block; margin-top: 10px; margin-left: 0;}
+    }
+    ul {
+      margin: 35px 0 25px 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        @include fontSize(13px);
+        margin-right: 0;
+        span {
+            @include extra-small-mobile {display: none;}
+          }
+        a {
+          background-color: #f0f0f0;
+          padding: 7px 10px 5px 10px;
+          @include border-radius(3px);
+          color: $body-text-color;
+          &:hover {
+            background-color: $color-1;
+            color: #fff;
+          }
+          i {
+            margin-right: 5px;
+            @include extra-small-mobile {margin-right: 0;}
+          }
+        }
+        &:last-child {
+          float: right;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .reply {
+    padding-top: 30px;
+    .user_info {
+    @include mobile {display: none;}
+    figure {
+      width: 50px;
+      height: 50px;
+      overflow: hidden;
+      @include border-radius(50%);
+      display: inline-block;
+      position: relative;
+      margin-bottom: 10px;
+      img {
+        width: 50px;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        @include transform (translate(-50%, -50%));
+      }
+    }
+    h5 {
+      @include fontSize(14px);
+    }
+  }
+  .review_content {
+    border-left: 5px solid #ededed;
+    padding-left: 20px;
+    strong {
+      @include extra-small-mobile {display: block;}
+    }
+    em {
+      color:#999;
+      font-style: italic;
+      float: right;
+      @include extra-small-mobile {float: none; display: block; margin-top: 10px;}
+    }
+    
+  }
+    
+  }
+}
+
+.dropdown {
+  border: 1px solid $border-color-2;
+  @include border-radius(3px);
+  padding: 0;
+  margin-bottom: 5px;
+  a {
+    padding: 15px 15px 12px 15px;
+    line-height: 1;
+    color: $body-text-color;
+    font-weight: 500;
+    display: block;
+    position: relative;
+    &:after {
+      font-family: 'custom_icons';
+      @include fontSize(21px);
+      @include transition-default;
+      position: absolute;
+      right: 10px;
+      top:10px;
+    }
+  }
+  &.show a { 
+    color: #333;
+    &:after { 
+      transform: rotateY(360deg);
+      color: #333;
+    }
+  }
+  .dropdown-menu {
+    @include fontSize(14px);
+    @include box-shadow (0px 7px 25px 0px rgba(0, 0, 0, 0.2));
+    border: 1px solid #fff;
+    @include border-radius(3px);
+    padding: 15px;
+    width: 100.5%;
+    left: -1px !important;
+    right: -1px !important;
+    margin: 5px 0 0 0;
+    h4 {
+        text-align: center;
+        @include fontSize(14px);
+        text-transform: uppercase;
+    }
+  }
+}
+
+.dropdown.time a:after {
+      content: '\e804';
+  }
+
+  .dropdown.time{
+      margin-bottom: 25px;
+  }
+   .dropdown.people a:after {
+      content:'\0059';
+  }
+
+.radio_select {
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            margin: 0;
+            width: 23.5%;
+        }
+    }
+
+    input[type="radio"] {
+        opacity: 0;
+        position: fixed;
+        width: 0;
+    }
+
+    label {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        padding: 8px;
+        border: 1px solid $border-color-2;
+        background-color: #fff;
+    }
+
+    label:hover {
+        background-color: #dfd;
+    }
+
+    input[type="radio"]:focus+label {
+        border: 1px solid transparent;
+        background-color: $color-1;
+        color: #fff;
+    }
+
+    input[type="radio"]:checked+label {
+        border: 1px solid transparent;
+        background-color: $color-1;
+        color: #fff;
+
+        em {
+            color: #ffff66;
+        }
+    }
+     &.type{
+        margin:0 -10px 20px -10px;
+        background-color: $color-3;
+        position: relative;
+        padding: 5px 2px 2px 2px;
+        @include border-radius(8px);
+        &:before {
+          top: 100%;
+          left: 50%;
+          border: solid transparent;
+          content: " ";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          border-top-color: $color-3;
+          border-width: 10px;
+          margin-left: -7px;
+        }
+        ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            margin: 0;
+            width: 32%;
+            @include fontSize(11px);
+            line-height: 1.2;
+            position: relative;
+            input[type="radio"]:checked + label {
+      
+            i {
+               color: #fff;
+            }
+            label {
+               color: #ccc;
+            }
+          }
+          i {
+             display: block;
+             @include fontSize(25px);
+             margin: 0;
+             line-height: 1;
+             color: #555;
+          }
+          label {
+              @include transition-default (all,0.2s, ease);
+             display: block;
+             background-color: #fff;
+             color: #999;
+             border-color: transparent;
+             @include border-radius(5px);
+            &:hover {
+             background-color: $color-1;
+            color: #fff;
+            i {
+               color: #fff;
+            }
+            }
+          }
+          
+        }
+    }
+    }
+}
+
+.indent_title_in {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 20px;
+  @include mobile {
+    padding-left: 0;
+  }
+  i {
+    font-size: 38px;
+    position: absolute;
+    left: 0;
+    color: #ddd;
+    top: 2px;
+    @include mobile {
+      position: static;
+    }
+  }
+  h3 {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 21px;
+  }
+  p {
+    color: #999;
+    margin: 0;
+    padding: 0;
+    @include fontSize(14px);
+  }
+}
+
+.wrapper_indent {
+  padding-left: 60px;
+  @include mobile {
+    padding-left: 0;
+  }
+}
+
+.services_list {
+  ul {
+    margin: 15px 0 0 0;
+    padding: 0;
+    list-style: none;
+    li {
+      border: 1px solid $border-color-2;
+       @include box-shadow (0 2px 4px rgba(3,27,78,.06));
+      padding: 15px;
+      margin-bottom: 10px;
+      @include border-radius(5px);
+      strong {
+        float: right;
+        @include rgba(bg, $color-1, 0.1);
+        @include border-radius(5px);
+        padding: 5px 10px;
+        display: inline-block;
+        min-width: 80px;
+        text-align: center;
+        position: relative;
+        top:-5px;
+        @include extra-small-mobile {float: none;display: block; top:10px; width: 100px; margin-bottom: 10px;}
+      }
+    }
+  }
+}
+
+.booking_summary {
+    padding: 25px;
+    h2 {
+          @include fontSize(18px);
+          border-bottom:2px solid $border-color-2;
+          padding: 0 25px 20px 25px;
+          line-height: 1;
+          margin: 0 -25px 25px -25px;
+        }
+  }
