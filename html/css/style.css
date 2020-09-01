@@ -1616,12 +1616,23 @@ html * {
 }
 
 body {
-  background: #fff;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #444;
+    background: #f7f9fa;
+    font-family: 'Poppins', sans-serif;
+    color: #4c4b4b;
+    font-size: 16px;
+    font-weight: 600;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+
 }
+
+body {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
 
 h1,
 h2,
@@ -1630,12 +1641,18 @@ h4,
 h5,
 h6 {
   color: #222;
-  font-weight: 500;
+  font-weight: 600;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ec722b;
+  text-transform: uppercase;
+  margin: 12px 0;
+  line-height: 1.5em;
 }
 
 p {
@@ -1679,6 +1696,7 @@ a:hover, a:focus {
 .container {
   max-width: 1280px !important;
 }
+
 @media (max-width: 991px) {
   .container {
     max-width: 100% !important;
