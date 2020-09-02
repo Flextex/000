@@ -3,6 +3,7 @@
 /*============================================================================================*/
 /*-------- Page head --------*/
 .video_youtube iframe, object, embed {
+  border: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -12,19 +13,163 @@
 .video_youtube {
   position: relative;
   height: 0;
-  margin: 10px 0;
+  margin: 0px 0;
   padding: 30px 0 56.25% 0; 
   overflow: hidden;
 }
+
+/*-------- VIDEO --------*/
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+}
+.videoWrapper43 {
+  padding-top: 75%;
+}
+.videoWrapper169 {
+  padding-top: 56%;
+}
+
+.videoIframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.videoPoster {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  background-size: cover;
+  text-indent: -999em;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: opacity 800ms, height 0s;
+  -moz-transition: opacity 800ms, height 0s;
+  transition: opacity 800ms, height 0s;
+  -webkit-transition-delay: 0s, 0s;
+  -moz-transition-delay: 0s, 0s;
+  transition-delay: 0s, 0s;
+}
+.videoPoster:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  margin: -40px 0 0 -40px;
+  border: 5px solid #fff;
+  border-radius: 100%;
+  -webkit-transition: border-color 300ms;
+  -moz-transition: border-color 300ms;
+  transition: border-color 300ms;
+}
+.videoPoster:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin: -20px 0 0 -10px;
+  border-left: 40px solid #fff;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  -webkit-transition: border-color 300ms;
+  -moz-transition: border-color 300ms;
+  transition: border-color 300ms;
+}
+.videoPoster:hover:before, .videoPoster:focus:before {
+  border-color: #f00;
+}
+.videoPoster:hover:after, .videoPoster:focus:after {
+  border-left-color: #f00;
+}
+.videoWrapperActive .videoPoster {
+  opacity: 0;
+  height: 0;
+  -webkit-transition-delay: 0s, 800ms;
+  -moz-transition-delay: 0s, 800ms;
+  transition-delay: 0s, 800ms;
+}
+/*-------- bloque --------*/
+blockquote {
+    font-size: 15px;
+    line-height: 1.5em;
+    font-style: italic;
+    color: #333;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 15px 20px;
+    border-left: 3px solid #ec722b;
+}
+
+blockquote {
+    font-size: 15px;
+    line-height: 1.5em;
+    font-style: italic;
+    color: #333;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 15px 20px;
+    border-left: 3px solid #ec722b;
+}
+a, abbr, acronym, address, applet, b, big, blockquote, body, caption, center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, li, object, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, u, ul, var {
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: 0 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+user agent stylesheet
+blockquote {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
+
 
 .icono {
 font-size: 20px;
 color: #ec722b;
 right: 20px;
 }
+.iconopost {
+font-size: 25px;
+color: #ec722b;
 
+}
+.iconomenu {
+font-size: 20px;
+color: #ec722b;
+right: 20px;
+}
 .main_info_wrapper {
-  padding: 15px;
+  padding: 10px;
 }
 .main_info_wrapper .main_info {
   position: relative;

@@ -1,0 +1,331 @@
+@import 'variables';
+@import 'mixin';
+
+/* Fonts */
+@import "icon_fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css";
+
+.box_why {
+    margin-top: 20px;
+    @include tablet {text-align: center;}
+    h3 {
+        @include fontSize(26px);
+    }
+
+    figure {
+        margin-bottom: 25px;
+    }
+}
+
+/*Pricing tables*/
+.plans {
+  margin: 0px auto 20px;
+}
+.plans:before,
+.plans:after {
+  content: '';
+  display: table;
+}
+.plans:after {
+  clear: both;
+}
+.plan {
+  margin: 10px 0;
+  padding: 20px 20px 30px 20px;
+  text-align: center;
+  border: solid $border-color-2;
+  border-width: 1px 0 1px 1px;
+  background-color: #fff;
+  @include box-shadow (0 2px 4px rgba(3,27,78,.06));
+  @include border-radius(5px);
+  overflow: hidden;
+  @include tablet {border-width: 1px;}
+}
+.col-md-4.plan:first-child {
+  margin-right: -5px;
+  margin-left: 5px;
+  @include tablet {margin: 0 0 15px 0;}
+}
+.plan:last-child {
+  border-width: 1px;
+}
+.plan-title {
+  position: relative;
+  margin: -25px -25px 30px -25px;
+  padding: 30px 20px 5px 20px;
+  border-bottom: 1px dotted #ccc;
+  @include fontSize(16px);
+  background-color: #f8f8f8;
+  color:#777;
+  h3 {
+    margin-bottom: 0;
+  }
+}
+.plan-tall .plan-title {
+  background-color: $color-1;
+  border-bottom: none;
+  color: #fff;
+   h3 {
+    color: #fff;
+  }
+}
+
+.plan-price {
+  margin: 0 auto 15px;
+  width: 110px;
+  height: 110px;
+  line-height: 115px;
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  background: #777;
+  @include border-radius(100px);
+  display: inline-block;
+  text-align: center;
+}
+.plan-price > span {
+  font-size: 12px;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.9);
+}
+.plan-features {
+  margin-bottom: 20px;
+  line-height: 2;
+}
+ul.plan-features {
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+.plan-features li {
+  list-style: none;
+}
+.plan-tall {
+  margin: 0;
+  background: #fff;
+  border-radius: 10px;
+  margin-right: -5px;
+  position: relative;
+  z-index: 100;
+  border: solid $color-1;
+  position: relative;
+}
+.plan-tall > .plan-price {
+  height: 130px;
+  width: 130px;
+  line-height: 135px;
+  font-size: 36px;
+  background: $color-1;
+  @include border-radius(130px);
+}
+
+.plan-tall + .plan {
+  border-left: 0;
+}
+
+/*-------- 2.7 Pricing page --------*/
+.margin_tabs {
+  margin-top:-97px;
+  @include tablet {margin-top:-70px;}
+  @include mobile {margin-top:-50px;}
+}
+.tabs {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  padding-bottom: 35px;
+  z-index: 5;
+  nav {
+    text-align: center;
+    overflow: hidden;
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: inline-block;
+      width: 100%;
+            text-align: center;
+      li {
+        margin: 0 -4px 0 0;
+        display: block;
+        display: inline-block;
+        background-color: #ededed;
+        width: 33%;
+        text-align: left;
+        line-height: 1.3;
+        @include tablet {text-align: center;}
+        a {
+          padding: 25px 35px 25px 90px;
+          color: #555;
+          display: block;
+          @include fontSize(21px);
+          white-space: nowrap;
+          position: relative;
+          font-weight: 500;
+          @include tablet {padding: 15px; @include fontSize(16px);}
+          i {
+            position: absolute;
+            left: 35px;
+            top:25px;
+            @include fontSize(38px);
+            @include tablet {display: none;}
+          }
+          em {
+            display: block;
+            @include fontSize(16px);
+            font-style: normal;
+            font-weight: normal;
+            @include mobile {display: none;}
+          }
+        }
+        &:first-child {
+          @include border-radius(3px 0 0 0);
+            border-right: 2px solid #ddd;
+        }
+        &:last-child {
+          @include border-radius(0 3px 0 0);
+          border-left: 2px solid #ddd;
+        }
+        &.tab-current {
+          background-color: #fafafc;
+          z-index: 100;
+          &:after {
+            right: auto;
+            left: 100%;
+            width: 4000px;
+          }
+          a {
+            color: #222;
+          }
+          a i {
+            color: $color-1;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Content */
+.content {
+  section {
+    padding: 30px 0 0 0;
+    display: none;
+    max-width: 1230px;
+    margin: 0 auto;
+    &:before,
+    &:after {
+      content: '';
+      display: table;
+    }
+    &.content-current {
+  display: block;
+}
+  }
+}
+
+.content section:after {
+  clear: both;
+}
+
+.no-js .content section {
+  display: block;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+
+.box_pricing {
+  padding: 30px;
+  margin-bottom: 30px;
+  border:1px solid $border-color-3;
+  @include border-radius(3px);
+  position: relative;
+  @include mobile {padding: 15px;}
+  hr {
+    margin: 25px -30px;
+    border-color:$border-color-3;
+    @include mobile {margin: 25px -15px;}
+  }
+  ul {
+    list-style: disc;
+    padding:0 0 0 20px;
+    margin: 0 0 30px 0;
+  }
+  a {
+    background-color: $color-1;
+    display: block;
+    color: #fff;
+    padding: 10px;
+    font-weight: 500;
+    @include border-radius(3px);
+    text-align: center;
+    &:hover{
+      background-color:$color-2;
+    }
+  }
+  .price {
+    text-align: center;
+    font-weight: 500;
+    @include fontSize(36px);
+    margin-bottom: 20px;
+    color: $color-1;
+    sup {
+      @include fontSize(16px);
+    }
+    em {
+      @include fontSize(16px);
+      color: $body-text-color;
+      font-weight: 400;
+    }
+  }
+}
+
+.ribbon_tabs {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+    text-align: right;
+    span {
+        font-size: 10px;
+        font-weight: bold;
+        color: #222;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 20px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        width: 100px;
+        display: block;
+        position: absolute;
+        top: 19px;
+        right: -21px;
+        &.top_selling {
+            background: #00dfaa;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                top: 100%;
+                z-index: -1;
+                border-left: 3px solid #008a69;
+                border-right: 3px solid transparent;
+                border-bottom: 3px solid transparent;
+                border-top: 3px solid #008a69;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0px;
+                top: 100%;
+                z-index: -1;
+                border-left: 3px solid transparent;
+                border-right: 3px solid #008a69;
+                border-bottom: 3px solid transparent;
+                border-top: 3px solid #008a69;
+            }
+        }
+    }
+}
