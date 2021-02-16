@@ -30,9 +30,7 @@ usevisualizer: "real",
 visualizertype: "7", 
 metadatatechnic: "",
 ownmetadataurl: "",
-usestreamcorsproxy: "true", //true o false
-corsproxy: "https://cors-anywhere.herokuapp.com/",
-streamurl: "https://stream.zenolive.com/ag60q91gd2zuv.aac", 
+streamurl: "http://142.44.213.161/t6uk40aw9c0uv", 
 streamtype: "radiozeno", //shoutcast2, icecast2, radiozeno, radionomy, radiojar, radioco
 icecastmountpoint: "",
 shoutcastpath: "/stream",
