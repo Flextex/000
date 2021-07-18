@@ -13,51 +13,39 @@
 <!-- <div id="lunaradio" style="width:100%; height:600px;background: #000000 url(https://i.imgur.com/CTQdbqh.jpg) bottom / cover no-repeat;">Cargando ...</div> -->
 
 <script>
-jQuery(document).ready(function($) {
-	$("#lunaradio").lunaradio({
-		token: "",
-		userinterface: "big",
-		backgroundcolor: "rgba(14,16,21,1)",
-		fontcolor: "#ffffff",
-		hightlightcolor: "#fa225b",
-		fontname: "",
-		googlefont: "",
-		fontratio: "0.4",
-		radioname: "My Radio Name",
-		scroll: "true",
-		coverimage: "",
-		onlycoverimage: "false",
-		coverstyle: "circle",
-		usevisualizer: "fake",
-		visualizertype: "4",
-		multicolorvisualizer: "false",
-		color1: "#e66c35",
-		color2: "#d04345",
-		color3: "#85a752",
-		color4: "#067dcc",
-		visualizeropacity: "0.4",
-		itunestoken: "1000lIPN",
-		metadatatechnic: "fallback",
-		ownmetadataurl: "",
-		streamurl: "https://node-18.zeno.fm/t6uk40aw9c0uv?rj-ttl=5&rj-tok=AAABers6-VoA8ZFCVpgwHS6kag",
-		streamtype: "radiozeno", //shoutcast2, icecast2, radiozeno, radionomy, radiojar, radioco
-		icecastmountpoint: "",
-		radionomyid: "",
-		radionomyapikey: "",
-		radiozenoid: "t6uk40aw9c0uv", 
-		radiojarid: "",
-		radiocoid: "",
-		shoutcastpath: "/chillout.mp3?type=http&nocache=377274",
-		shoutcastid: "1",
-		streamsuffix: "",
-		metadatainterval: "20000",
-		volume: "90",
-		debug: "false",
-		autoplay: "false",
-		displayliveicon: "true",
-		displayvisualizericon: "true",
-	usestreamcorsproxy: "false", 
-	corsproxy: "https://www.loadweb.net/simple-cors/?q=",
-	});
-});
+  $("#lunaradio").lunaradio({
+  userinterface: "big",
+  backgroundcolor: "",
+  fontcolor: "#d2e603",
+  hightlightcolor: "#ff4b5c",
+  fontname: "Anton",
+  googlefont: "Anton&display=swap",
+  fontratio: "0.4",
+  radioname: "RADIO EN VIVO", //nombre de radio
+  scroll: "true",
+  coverimage: "https://i.imgur.com/t34G2eY.jpg", //link o ruta de logo radio
+  onlycoverimage: "false", //true para mostrar solo logo radio
+  coverstyle: "animated",
+  usevisualizer: "real",
+  visualizertype: "7",
+  metadatatechnic: "corsproxy",
+  ownmetadataurl: "",
+  usestreamcorsproxy: "true", //true o false
+  corsproxy: "https://cors-anywhere.herokuapp.com/",
+  streamurl: "http://stream.zeno.fm/255va1aw9c0uv",
+  streamtype: "radiozeno", //shoutcast2, icecast2, radiozeno, radionomy, radiojar, radioco
+  icecastmountpoint: "/radio.mp3",
+  shoutcastpath: "/stream",
+  shoutcastid: "",
+  streamsuffix: "",
+  radionomyid: "",
+  radionomyapikey: "",
+  radiozenoid: "255va1aw9c0uv",
+  radiojarid: "",
+  radiocoid: "",
+  itunestoken: "1000lIPN",
+  metadatainterval: "20000",
+  volume: "85",
+  debug: "false",
+  });
 </script>	
